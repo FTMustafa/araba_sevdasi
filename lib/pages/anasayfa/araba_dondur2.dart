@@ -1,3 +1,4 @@
+import 'package:araba_sevdasi/anaMenu.dart';
 import 'package:araba_sevdasi/pages/araba.dart';
 import 'package:flutter/material.dart';
 
@@ -67,7 +68,11 @@ class _arabaDondurState extends State<arabaDondur2> {
                   ),
                   actions: [
                     TextButton(
-                      onPressed: () => Navigator.pop(context),
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AnaMenu()),
+                      ),
                       child: const Text(
                         "Tamam",
                         style: TextStyle(

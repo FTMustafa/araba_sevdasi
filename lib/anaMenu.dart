@@ -12,6 +12,8 @@ class AnaMenu extends StatefulWidget {
   State<AnaMenu> createState() => AnaMenuState();
 }
 
+var temaMod = Brightness.light;
+
 class AnaMenuState extends State<AnaMenu> {
   var suAnkiIndex = 0;
 
@@ -24,7 +26,6 @@ class AnaMenuState extends State<AnaMenu> {
         )
       ];
 
-  var temaMod = Brightness.light;
   temaDegistir(int index) {
     setState(() {
       if (index == 1) {
@@ -47,6 +48,7 @@ class AnaMenuState extends State<AnaMenu> {
   Widget build(BuildContext context) {
     var sayfalar = pageListFunc();
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         //backgroundColor: Colors.green.shade300,
         body: sayfalar[suAnkiIndex],

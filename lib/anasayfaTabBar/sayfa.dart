@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class Sayfa extends StatefulWidget {
   @override
   State<Sayfa> createState() => SayfaState();
-  Sayfa({super.key});
+  const Sayfa({super.key});
 }
 
 class SayfaState extends State<Sayfa> {
@@ -37,56 +37,52 @@ class SayfaState extends State<Sayfa> {
             height: 40,
           ),
           //Yolculuğa başla tuşunun olduğu kısım
-          Padding(
-            padding: const EdgeInsets.only(top: 0),
-            child: SizedBox(
-              height: 160,
-              width: 360,
-              child: Card(
-                surfaceTintColor: Colors.blueGrey.shade400,
-                shadowColor: const Color.fromARGB(255, 255, 193, 40),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Text(
-                        "Happy Fuel'a Hoşgeldin!",
-                        style: TextStyle(
-                          fontSize: 32,
-                          fontFamily: "Oswald",
-                          fontWeight: FontWeight.w400,
-                          color:
-                              Theme.of(context).colorScheme.onPrimaryContainer,
-                        ),
+          SizedBox(
+            height: 160,
+            width: 360,
+            child: Card(
+              surfaceTintColor: Colors.blueGrey.shade400,
+              shadowColor: const Color.fromARGB(255, 255, 193, 40),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50)),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      "Happy Fuel'a Hoşgeldin!",
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontFamily: "Oswald",
+                        fontWeight: FontWeight.w400,
+                        color: Theme.of(context).colorScheme.onPrimaryContainer,
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: SizedBox(
-                        width: 240,
-                        child: TextButton(
-                          style: const ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(
-                              Color.fromARGB(255, 255, 193, 40),
-                            ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: SizedBox(
+                      width: 240,
+                      child: TextButton(
+                        style: const ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(
+                            Color.fromARGB(255, 255, 193, 40),
                           ),
-                          child: const Text(
-                            "Yolculuğa Başla",
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontFamily: "Oswald",
-                              fontWeight: FontWeight.w400,
-                              color: Color.fromARGB(255, 255, 255, 255),
-                            ),
-                          ),
-                          onPressed: () => git(context),
                         ),
+                        child: const Text(
+                          "Yolculuğa Başla",
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontFamily: "Oswald",
+                            fontWeight: FontWeight.w400,
+                            color: Color.fromARGB(255, 255, 255, 255),
+                          ),
+                        ),
+                        onPressed: () => git(context),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

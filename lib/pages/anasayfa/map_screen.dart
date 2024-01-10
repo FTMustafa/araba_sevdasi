@@ -37,7 +37,7 @@ class MapScreenState extends State<MapScreen> {
             fontWeight: FontWeight.w400,
           ),
         ),
-        backgroundColor: Colors.yellow,
+        backgroundColor: const Color.fromARGB(255, 255, 193, 40),
         foregroundColor: Theme.of(context).colorScheme.background,
       ),
       body: GoogleMap(
@@ -107,7 +107,9 @@ class MapScreenState extends State<MapScreen> {
   }
 
   void pushTheAnimationPage(BuildContext context) {
-    Navigator.push(context,
-        MaterialPageRoute(builder: (context) => AnimationCalculate(distance: infoText)));
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => AnimationCalculate(distance: infoText)));
   }
 }
