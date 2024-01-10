@@ -60,7 +60,7 @@ class AnaMenuState extends State<AnaMenu> {
               label: "Ana Sayfa",
             ),
             BottomNavigationBarItem(
-              backgroundColor: Color.fromARGB(255, 212, 0, 194),
+              backgroundColor: Color.fromARGB(255, 222, 65, 109),
               icon: Icon(Icons.local_gas_station_rounded),
               label: "Yakıt",
             ),
